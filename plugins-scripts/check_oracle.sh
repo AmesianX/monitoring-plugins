@@ -3,7 +3,7 @@
 # latigid010@yahoo.com
 # 01/06/2000
 #
-#  This Nagios plugin was created to check Oracle status
+#  This Monitoring plugin was created to check Oracle status
 #
 
 PROGNAME=`basename $0`
@@ -163,7 +163,7 @@ case "$cmd" in
     }'
     ;;
 --db)
-    pmonchk=`ps -ef | grep -v grep | grep -c "ora_pmon_${2}$"`
+    pmonchk=`ps -ef | grep -v grep | grep -E -c "(asm|ora)_pmon_${2}$"`
     if [ ${pmonchk} -ge 1 ] ; then
 	echo "${2} OK - ${pmonchk} PMON process(es) running"
 	exit $STATE_OK

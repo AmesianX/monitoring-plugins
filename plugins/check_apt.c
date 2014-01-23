@@ -1,9 +1,9 @@
 /*****************************************************************************
 * 
-* Nagios check_apt plugin
+* Monitoring check_apt plugin
 * 
 * License: GPL
-* Copyright (c) 2006-2008 Nagios Plugins Development Team
+* Copyright (c) 2006-2008 Monitoring Plugins Development Team
 * 
 * Original author: Sean Finney
 * 
@@ -31,7 +31,7 @@
 
 const char *progname = "check_apt";
 const char *copyright = "2006-2008";
-const char *email = "nagiosplug-devel@lists.sourceforge.net";
+const char *email = "devel@monitoring-plugins.org";
 
 #include "common.h"
 #include "runcmd.h"
@@ -430,7 +430,7 @@ print_help (void)
   printf(UT_HELP_VRSN);
   printf(UT_EXTRA_OPTS);
 
-  printf(UT_TIMEOUT, timeout_interval);
+  printf(UT_PLUG_TIMEOUT, timeout_interval);
 
   printf (" %s\n", "-U, --upgrade=OPTS");
   printf ("    %s\n", _("[Default] Perform an upgrade.  If an optional OPTS argument is provided,"));
